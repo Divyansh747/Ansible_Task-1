@@ -12,6 +12,11 @@
     - name: install docker-ce python packagde
       command: "pip3 install docker"
       ignore_errors: true
+    - name: starting docker service
+      service:
+        name: "docker"
+        state: started
+        enabled: yes
 
 
 
