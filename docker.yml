@@ -7,6 +7,11 @@
         enabled: true
         gpgcheck: no
         description: docker repository
+    - name: installing docker package
+      command: "yum install docker-ce -y --nobest"
+    - name: install docker-ce python packagde
+      command: "pip3 install docker"
+      ignore_errors: true
 
 
 
