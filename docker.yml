@@ -37,6 +37,14 @@
       copy: 
         src: "/website/webpage.html"
         dest: "/html/"
-
+    - name: run docker image
+      docker_container:
+        name: httpd
+        image: "httpd"
+        exposed_ports: 8080
+        ports:
+          - "8080:80"
+        volumes:
+          - /html/:/usr/local/apache2/htdocs/
 
 
