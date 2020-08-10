@@ -33,6 +33,10 @@
       file:
         path: /html
         state: directory
+    - name: Copy the html code in /html direcotry
+      copy: 
+        src: "/website/webpage.html"
+        dest: "/html/"
 
 
 
