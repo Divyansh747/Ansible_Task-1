@@ -1,3 +1,12 @@
 - hosts: group1
   tasks:
-  
+    - name: docker configuration
+      yum_repository:
+        name: docker-repository
+        baseurl: https://download.docker.com/linux/centos/7/x86_64/stable/
+        enabled: true
+        gpgcheck: no
+        description: docker repository
+
+
+
