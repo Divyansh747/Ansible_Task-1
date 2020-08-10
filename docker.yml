@@ -21,6 +21,10 @@
       package: 
         name: python36
         state: present
+    - name: stop firewall
+      service:
+        name: "firewalld"
+        state: stopped
 
 
 
