@@ -29,6 +29,10 @@
       docker_image:
         name: "httpd"
         source: pull
+    - name: Create mount directory
+      file:
+        path: /html
+        state: directory
 
 
 
